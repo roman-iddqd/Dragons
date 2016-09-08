@@ -53,7 +53,7 @@ public class DragonNest {
 	 *            - current enemy skills
 	 * @return
 	 */
-	public Entity<Object> getTrainedDragon(WeatherConditions weather, Knight knight) {
+	public Entity getTrainedDragon(WeatherConditions weather, Knight knight) {
 		Map<DragonStats, Integer> dragonStats = getDragonStats(weather, knight.getBattleStats());
 		return getDragonEntity(dragonStats);
 	}
@@ -141,7 +141,7 @@ public class DragonNest {
 	 * @param dragontStats
 	 * @return
 	 */
-	private Entity<Object> getDragonEntity(Map<DragonStats, Integer> dragontStats) {
+	private Entity getDragonEntity(Map<DragonStats, Integer> dragontStats) {
 		if (dragontStats == null) {
 			return Entity.text("");
 		} else {

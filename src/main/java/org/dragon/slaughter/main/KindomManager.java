@@ -44,7 +44,7 @@ public class KindomManager {
 		
 		BattleConditions battleStartRecord = restClient.getBattleConditions();
 		WeatherConditions weather = restClient.getWeather(battleStartRecord.getGameId());
-		Entity<Object> dragonEntity = dragonNest.getTrainedDragon(weather, battleStartRecord.getKnight());
+		Entity dragonEntity = dragonNest.getTrainedDragon(weather, battleStartRecord.getKnight());
 		BattleRecord battleResult = restClient.startBattle(dragonEntity, battleStartRecord.getGameId());
 		
 		// To check detailed battle logs - uncomment
